@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: calendly-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: calendly-db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - calendly_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U root -d calendly-db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  calendly_postgres_data:
