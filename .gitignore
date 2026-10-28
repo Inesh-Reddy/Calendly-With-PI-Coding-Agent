@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# Prisma generated client
+server/src/generated/prisma/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime/process files
+*.pid
+*.seed
+*.pid.lock
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker volumes/data
+.docker/
+postgres-data/
+
+# Cache/temp
+.cache/
+.tmp/
+tmp/
+.temp/
+
+# Test artifacts
+.nyc_output/
+
+# Tooling
+.claude/
+.windsurf/
+.agents/
+skills-lock.json
